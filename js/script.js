@@ -101,7 +101,9 @@ function dadosJogador() {
 function restart() {
     game.clearCards();
     startGame();
-    var jogadas = 0;
+    jogadas = 0;
+    NJogadas.innerHTML = 0;
+    Aproveitamento.innerText = 0;
     let gameOverLayer = document.getElementById("gameOver");
     gameOverLayer.style.display = 'none';
 }
