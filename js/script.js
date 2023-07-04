@@ -93,7 +93,7 @@ function dadosJogador() {
     NJogadas.innerText = jogadas;
     NJogadasCop.innerText = jogadas;
 
-    if (jogadas > 10) {
+    if (jogadas > 9) {
         let valorAproveitamento = (100 / (jogadas / 10)).toFixed(0);
         Aproveitamento.innerText = valorAproveitamento;
         AproveitamentoCop.innerText = valorAproveitamento;
