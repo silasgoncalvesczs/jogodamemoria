@@ -5,8 +5,9 @@ const ICON = "icon";
 
 const NomeJogador = document.querySelector("#NomeJogador");
 const NJogadas = document.querySelector("#NJogadas");
+const NJogadasCop = document.querySelector("#NJogadasCop");
 const Aproveitamento = document.querySelector("#Aproveitamento");
-const Aproveitamento2 = document.querySelector("#Aproveitamento2");
+const AproveitamentoCop = document.querySelector("#AproveitamentoCop");
 var jogadas = 0;
 
 startGame();
@@ -89,11 +90,13 @@ function flipCard() {
 
 function dadosJogador() {
     jogadas += 1;
-    NJogadas.innerHTML = jogadas;
+    NJogadas.innerText = jogadas;
+    NJogadasCop.innerText = jogadas;
 
     if (jogadas > 10) {
         let valorAproveitamento = (100 / (jogadas / 10)).toFixed(0);
         Aproveitamento.innerText = valorAproveitamento;
+        AproveitamentoCop.innerText = valorAproveitamento;
     }
 }
 
@@ -102,8 +105,10 @@ function restart() {
     game.clearCards();
     startGame();
     jogadas = 0;
-    NJogadas.innerHTML = 0;
+    NJogadas.innerText = 0;
+    NJogadasCop.innerText = 0;
     Aproveitamento.innerText = 0;
+    AproveitamentoCop.innerText = 0;
     let gameOverLayer = document.getElementById("gameOver");
     gameOverLayer.style.display = 'none';
 }
